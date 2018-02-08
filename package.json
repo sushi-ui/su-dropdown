@@ -1,8 +1,8 @@
 {
   "name": "@sushi-ui/su-dropdown",
   "version": "1.0.9",
-  "description": "Produce universal library with webpack and es6",
-  "main": "lib/su-dropdown.min.js",
+  "description": "Dropdown component",
+  "main": "lib/su-dropdown.js",
   "scripts": {
     "build": "rm -rf lib & webpack --env build",
     "dev": "webpack --progress --colors --watch --env dev",
@@ -26,7 +26,6 @@
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-env": "^1.6.1",
     "chai": "^4.1.2",
-    "chai-dom": "^1.7.0",
     "css-loader": "^0.28.9",
     "cssnano": "^3.10.0",
     "eslint": "^4.13.1",

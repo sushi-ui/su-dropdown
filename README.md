@@ -15,17 +15,17 @@ npm install @sushi-ui/su-dropdown
 ### Setup
 
 ```html
-<link rel="stylesheet" href="/path/@sushi-ui/su-dropdown/su-dropdown.css">
+<link rel="stylesheet" href="/path/@sushi-ui/su-dropdown/lib/su-dropdown.css">
 <body>
-<script src="/path/@sushi-ui/su-dropdown/su-dropdown.js"></script>
+<script src="/path/@sushi-ui/su-dropdown/lib/su-dropdown.js"></script>
 </body>
 ```
 
 or
 
 ```javascript
-import '@sushi-ui/su-dropdown/su-dropdown.css'
-import SuDropdown from '@sushi-ui/su-dropdown'
+import '@sushi-ui/su-dropdown/lib/su-dropdown.css';
+import SuDropdown from '@sushi-ui/su-dropdown';
 ```
 
 ### Getting started
@@ -42,8 +42,8 @@ Minimum HTML markup
 Create a new dropdown instance
 
 ```javascript
-const el = document.querySelector('.su-Dropdown')
-const dropdown = new SuDropdown(el, options)
+const el = document.querySelector('.su-Dropdown');
+const dropdown = new SuDropdown(el, options);
 ```
 
 ### Options
