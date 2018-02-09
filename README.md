@@ -19,6 +19,21 @@ import '@sushi-ui/su-dropdown/lib/su-dropdown.css'
 import SuDropdown from '@sushi-ui/su-dropdown'
 ```
 
+or
+
+```html
+<link rel="stylesheet" href="node_modules/@sushi-ui/su-dropdown/lib/su-dropdown.css">
+
+<div class="su-Dropdown">
+  <button>trigger</button>
+  <div class="su-Dropdown-content">
+    // dropdown content
+  </div>
+</div>
+
+<script src="node_modules/@sushi-ui/su-dropdown/lib/su-dropdown.js"></script>
+```
+
 ### Getting started
 
 The `.su-Dropdown` and `.su-Dropdown-content` classes are mandatory in the markup.

@@ -22,7 +22,7 @@
   "parser": "babel-eslint",
 
   "plugins": [
-    
+
   ],
 
   "rules": {
@@ -33,7 +33,7 @@
     "comma-spacing": [2, { "before": false, "after": true }],
     "comma-style": [2, "last"],
     "complexity": 0,
-    "consistent-return": 2,
+    "consistent-return": 0, // 2
     "consistent-this": 0,
     "curly": [2, "multi-line"],
     "default-case": 0,
@@ -157,7 +157,7 @@
     "quote-props": 0,
     "quotes": [2, "single", "avoid-escape"],
     "radix": 2,
-    "semi": [2, "always"],
+    "semi": [2, "never"],
     "semi-spacing": 0,
     "sort-vars": 0,
     "space-before-blocks": [2, "always"],

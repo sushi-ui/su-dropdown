@@ -1,7 +1,7 @@
-import './su-dropdown.css'
+import './style.css'
 import { defaults, Popper, throttle, observer, nextTick, clickOutside, clickInside } from './utils'
 
-export class SuDropdown {
+export default class SuDropdown {
   constructor(node, options = {}) {
     // Set intal state
     this.name = 'su-Dropdown'
@@ -40,7 +40,8 @@ export class SuDropdown {
         boundaries: 'viewport',
         placement: 'bottom-start',
         closeOnClickInside: false,
-        closeOnClickOutside: true
+        closeOnClickOutside: true,
+        __MOCK_POPPER__: null
       },
       options,
       this
@@ -70,6 +71,8 @@ export class SuDropdown {
   }
 
   _createPopper() {
+    if (this.__MOCK_POPPER__) return (this.popper = new this.__MOCK_POPPER__())
+
     this.popper = new Popper(this.elTrigger, this.elContent, {
       removeOnDestroy: true,
       placement: this.placement,
@@ -106,6 +109,7 @@ export class SuDropdown {
     this.elContent.style.display = null
     this.elContent.removeEventListener('transitionend', this._transitionEnd)
     const detail = this
+
     this.el.dispatchEvent(new CustomEvent('hide', { detail }))
   }
 
@@ -120,6 +124,7 @@ export class SuDropdown {
     nextTick(() => this.elContent.classList.add('is-visible'))
     clickOutside
     const detail = this
+
     this.el.dispatchEvent(new CustomEvent('show', { detail }))
   }
 

@@ -4,25 +4,19 @@
   "description": "Dropdown component",
   "main": "lib/su-dropdown.js",
   "scripts": {
-    "build": "rm -rf lib & webpack --env build",
+    "build": "rm -rf lib & webpack --env build && npm run test",
     "dev": "webpack --progress --colors --watch --env dev",
     "test": "mocha --require babel-core/register --colors ./test/*.spec.js",
-    "test:watch": "mocha --require babel-core/register --colors -w ./test/*.spec.js"
+    "test:watch":
+      "mocha --require babel-core/register --require ignore-styles --colors -w ./test/*.spec.js"
   },
   "repository": "https://github.com/sushi-ui/su-dropdown.git",
-  "keywords": [
-    "ui",
-    "component",
-    "dropdown",
-    "popper"
-  ],
-  "files": [
-    "lib",
-    "README.md"
-  ],
+  "keywords": ["ui", "component", "dropdown", "popper"],
+  "files": ["lib", "README.md"],
   "author": "Rasmus Hallström",
   "license": "MIT",
   "devDependencies": {
+    "autoprefixer": "^7.2.5",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.3",
@@ -32,10 +26,14 @@
     "chai": "^4.1.2",
     "css-loader": "^0.28.9",
     "cssnano": "^3.10.0",
+    "cssnano-preset-advanced": "^4.0.0-rc.2",
     "eslint": "^4.13.1",
     "eslint-loader": "^1.9.0",
     "extract-text-webpack-plugin": "^3.0.2",
+    "ignore-styles": "^5.0.1",
+    "jsdom": "9.0.0",
     "mocha": "^4.0.1",
+    "mocha-jsdom": "^1.1.0",
     "popper.js": "^1.12.9",
     "postcss-cssnext": "^3.1.0",
     "postcss-import": "^11.0.0",

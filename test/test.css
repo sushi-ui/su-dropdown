@@ -1,6 +1,23 @@
+:root {
+  --su-Dropdown-content-transitionDuration: 0.2s;
+}
+
 .su-Dropdown-content {
   background: #fff;
   box-shadow: 0 3px 6px #f1f1f1;
-  padding: 16px;
+  padding: 8px 0;
   font-family: arial;
+  width: 200px;
+}
+
+.myWrapper {
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.myWrapper > div {
+  height: 40px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
 }

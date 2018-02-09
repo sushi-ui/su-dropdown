@@ -1,0 +1,31 @@
+:root {
+  --su-Dropdown-content-transitionDuration: 0.3s;
+  --su-Dropdown-content-transitionTiming: ease;
+  --su-Dropdown-content-transform: translate3d(0, -16px, 0);
+  --su-Dropdown-content-isVisible-transform: translate3d(0, 0, 0);
+  --su-Dropdown-content-transformOrigin: center center;
+}
+
+.su-Dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.su-Dropdown-content {
+  display: none;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  transform: var(--su-Dropdown-content-transform, translateY(-16px));
+  transition-duration: var(--su-Dropdown-content-transitionDuration, 0.3s);
+  transition-timing-function: var(--su-Dropdown-content-transitionTiming, ease);
+  transform-origin: var(--su-Dropdown-content-transformOrigin, center center);
+  transition-property: opacity, transform;
+}
+
+.su-Dropdown-content.is-visible {
+  pointer-events: auto;
+  opacity: 1;
+  transform: var(--su-Dropdown-content-isVisible-transform, translateY(0));
+}

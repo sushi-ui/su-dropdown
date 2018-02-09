@@ -24,7 +24,7 @@ const config = {
   output: {
     path: __dirname + '/lib',
     filename: outputFile,
-    library: libraryName,
+    library: 'SuDropdown',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
