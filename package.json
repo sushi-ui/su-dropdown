@@ -1,18 +1,25 @@
 {
   "name": "@sushi-ui/su-dropdown",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Dropdown component",
   "main": "lib/su-dropdown.js",
   "scripts": {
     "build": "rm -rf lib & webpack --env build",
     "dev": "webpack --progress --colors --watch --env dev",
     "test": "mocha --require babel-core/register --colors ./test/*.spec.js",
-    "test:watch":
-      "mocha --require babel-core/register --colors -w ./test/*.spec.js"
+    "test:watch": "mocha --require babel-core/register --colors -w ./test/*.spec.js"
   },
   "repository": "https://github.com/sushi-ui/su-dropdown.git",
-  "keywords": ["ui", "component", "dropdown", "popper"],
-  "files": ["lib", "README.md"],
+  "keywords": [
+    "ui",
+    "component",
+    "dropdown",
+    "popper"
+  ],
+  "files": [
+    "lib",
+    "README.md"
+  ],
   "author": "Rasmus Hallström",
   "license": "MIT",
   "devDependencies": {
