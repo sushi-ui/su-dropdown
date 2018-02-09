@@ -43,6 +43,7 @@ const el = document.querySelector('.su-Dropdown')
 const dropdown = new SuDropdown(el, options)
 ```
 
+<<<<<<< HEAD
 ### Options
 
 | Prop                  | Type                 | Default          | Valid options                                     | Desc                                         |
