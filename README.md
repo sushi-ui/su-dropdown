@@ -21,9 +21,10 @@ import SuDropdown from '@sushi-ui/su-dropdown'
 
 ### Getting started
 
+The `.su-Dropdown` and `.su-Dropdown-content` classes are mandatory in the markup.
 The `.su-Dropdown-content` element needs to be sibling to the trigger element.
 Only the trigger element and the element with class `.su-Dropdown-content` must be inside the `.su-Dropdown` wrapper element.
-The `su-Dropdown-content` element have only basic styling and transitions.
+Feel free to style the `su-Dropdown-content` element.
 
 Minimum HTML markup
 
@@ -68,6 +69,10 @@ Show dropdown
 #### hide()
 
 Hide dropdown
+
+#### destroy()
+
+Remove all event listeneres from the dropdown component.
 
 ### Events
 

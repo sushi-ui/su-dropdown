@@ -1,21 +1,19 @@
 /* global __dirname, require, module*/
 
-const webpack = require('webpack');
-const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
-const path = require('path');
-const env = require('yargs').argv.env; // use --env with webpack 2
-const pkg = require('./package.json');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const webpack = require('webpack')
+const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin
+const path = require('path')
+const env = require('yargs').argv.env // use --env with webpack 2
+const pkg = require('./package.json')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-let libraryName = pkg.name.split('/')[1];
+let libraryName = pkg.name.split('/')[1]
 
-const plugins = [
-  new ExtractTextPlugin({ filename: '[name].css', disable: env === 'dev' })
-];
-const outputFile = `${libraryName}.js`;
+const plugins = [new ExtractTextPlugin({ filename: '[name].css', disable: env === 'dev' })]
+const outputFile = `${libraryName}.js`
 
 if (env === 'build') {
-  plugins.push(new UglifyJsPlugin({ minimize: true }));
+  plugins.push(new UglifyJsPlugin({ minimize: true }))
 }
 
 const config = {
@@ -27,7 +25,6 @@ const config = {
     path: __dirname + '/lib',
     filename: outputFile,
     library: libraryName,
-
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
@@ -62,6 +59,6 @@ const config = {
     extensions: ['.json', '.js']
   },
   plugins: plugins
-};
+}
 
-module.exports = config;
+module.exports = config
