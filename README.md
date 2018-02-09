@@ -14,36 +14,33 @@ npm install @sushi-ui/su-dropdown
 
 ### Setup
 
-```html
-<link rel="stylesheet" href="/path/@sushi-ui/su-dropdown/lib/su-dropdown.css">
-<body>
-<script src="/path/@sushi-ui/su-dropdown/lib/su-dropdown.js"></script>
-</body>
-```
-
-or
-
 ```javascript
-import '@sushi-ui/su-dropdown/lib/su-dropdown.css';
-import SuDropdown from '@sushi-ui/su-dropdown';
+import '@sushi-ui/su-dropdown/lib/su-dropdown.css'
+import SuDropdown from '@sushi-ui/su-dropdown'
 ```
 
 ### Getting started
+
+The `.su-Dropdown-content` element needs to be sibling to the trigger element.
+Only the trigger element and the element with class `.su-Dropdown-content` must be inside the `.su-Dropdown` wrapper element.
+The `su-Dropdown-content` element have only basic styling and transitions.
 
 Minimum HTML markup
 
 ```hmtl
 <div class="su-Dropdown">
   <button>trigger</button>
-  <div class="su-Dropdown-content"></div>
+  <div class="su-Dropdown-content">
+    // dropdown content
+  </div>
 </div>
 ```
 
 Create a new dropdown instance
 
 ```javascript
-const el = document.querySelector('.su-Dropdown');
-const dropdown = new SuDropdown(el, options);
+const el = document.querySelector('.su-Dropdown')
+const dropdown = new SuDropdown(el, options)
 ```
 
 ### Options
@@ -57,14 +54,6 @@ const dropdown = new SuDropdown(el, options);
 | `placement`           | _String_             | **bottom-start** | auto, top, right, bottom, left                    | Option can also have modifier (-start, -end) |
 | `closeOnClickInside`  | _Boolean_            | **false**        | true/false                                        | -                                            |
 | `closeOnClickOutside` | _Boolean_            | **true**         | true/false                                        | -                                            |
-
-offsetX: 0,
-offsetY: 0,
-padding: 16,
-boundaries: 'viewport',
-placement: 'bottom-start',
-closeOnClickInside: false,
-closeOnClickOutside: true
 
 ### API
 
