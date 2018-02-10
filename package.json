@@ -1,6 +1,6 @@
 {
   "name": "@sushi-ui/su-dropdown",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "Dropdown component",
   "main": "lib/su-dropdown.js",
   "scripts": {
