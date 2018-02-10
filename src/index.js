@@ -121,8 +121,8 @@ export default class SuDropdown {
   _onShow() {
     this.popper.scheduleUpdate()
     this.elContent.style.display = 'block'
+    this.elContent.offsetHeight // Force reflow
     nextTick(() => this.elContent.classList.add('is-visible'))
-    clickOutside
     const detail = this
 
     this.el.dispatchEvent(new CustomEvent('show', { detail }))
