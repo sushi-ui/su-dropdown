@@ -97,11 +97,11 @@ export default class SuDropdown {
       if (this.closeOnClickOutside) {
         this.clickOutsideEvent = clickOutside(this.el, () => (this._show = false))
       }
-    } else {
-      this._onHide()
       if (this.closeOnClickInside) {
         this.clickInsideEvent = clickInside(this.elContent, () => (this._show = false))
       }
+    } else {
+      this._onHide()
     }
   }
 
